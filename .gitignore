@@ -1,0 +1,56 @@
+# Gradle files and build directories
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Ignore build folders in source sets except specific exceptions
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# STS (Spring Tool Suite)
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# VS Code
+.vscode/
+
+# Kotlin specific
+.kotlin/
+
+# Spring Boot specific
+*.log
+spring.log
+
+# Environment files (if any)
+.env
+*.env
+
+# Docker
+docker-compose.override.yml
+
+# Miscellaneous
+.DS_Store
