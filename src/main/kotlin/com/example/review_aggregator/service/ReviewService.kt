@@ -1,10 +1,11 @@
-package service
+package com.example.review_aggregator.service
 
-import dto.ReviewCreateDTO
+import com.example.review_aggregator.dto.ReviewCreateDTO
 import org.springframework.stereotype.Service
 import org.springframework.web.client.RestTemplate
-import repository.ReviewRepository
-import entity.Review
+import com.example.review_aggregator.repository.ReviewRepository
+import com.example.review_aggregator.entity.Review
+import java.time.LocalDateTime
 
 @Service
 class ReviewService(
@@ -29,4 +30,11 @@ class ReviewService(
             reviewRepository.saveAll(reviews)
         }
     }
+
+    fun search(
+        author: String?,
+        minRating: Int?,
+        maxRating: Int?,
+        since: LocalDateTime?
+    ): List<Review> = reviewRepository.search(author, minRating, maxRating, since)
 }
